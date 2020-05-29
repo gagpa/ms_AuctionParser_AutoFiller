@@ -1,7 +1,6 @@
 from os import environ
 
-api_links = {'xml_url': environ.get('API_XML_URL'),
-             'xml_id': environ.get('API_XML_ID')}
+api_links = {'PARSER_URL_XML': environ.get('API_PARSER_XML_URL'),
+             'PARSER_LOCAL_XML_NAME': environ.get('API_PARSER_LOCAL_XML_NAME')}
 
-additional_info = {'prefix_url': environ.get('PREFIX_URL'),
-                   'local_path': environ.get('DEFAULT_LOCAL_PATH')}
+api_additional_info = {'PREFIX_URL_XML': environ.get('PREFIX_URL_XML')}
