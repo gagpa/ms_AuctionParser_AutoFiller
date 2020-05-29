@@ -9,7 +9,7 @@ db = SQLAlchemy()
 def create_app(config_name: str) -> Flask:
     """Создание объекта точки входа приложаения"""
     app = Flask(__name__)
-    config = ConfigDealer.get_main(config_name)
+    config = ConfigDealer.get_main_config(config_name)
     app.config.from_object(config)
     config.init_app(app)
     db.init_app(app)
