@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -16,3 +18,6 @@ def create_app(config_name: str) -> Flask:
     from app.api import api
     app.register_blueprint(api, url_prefix='/api/v1')
     return app
+
+
+app = create_app(os.environ.get('APP_MODE') or 'default')
